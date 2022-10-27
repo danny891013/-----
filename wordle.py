@@ -1,9 +1,15 @@
+import random
+
 if __name__ == "__main__":
     #User input
     user_input = input()
 
     #Specify an answer
-    answer = "apple"
+    f = open("words.txt", "r")
+    dictionary = f.read().splitlines()
+    f.close()
+    answer = random.sample(dictionary, 1)[0]
+    print(answer)
 
 
     #Compare user input and answer
